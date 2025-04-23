@@ -8,6 +8,8 @@ function convert() {
     if (convertType1 === "decimal") {
         if (convertType2 === "binary") {
             convertDecimalToBinary()
+        } else if (convertType2 === "octal") {
+            convertDecimalToOctal()
         }
     } else if (convertType1 === "binary") {
         if (convertType2 === "decimal") {
@@ -43,6 +45,35 @@ function convertDecimalToBinary() {
             }
         }
         result.value = binaryResult
+    }
+}
+
+function convertDecimalToOctal() {
+    const input = document.getElementById("input")
+    const result = document.getElementById("result")
+    const msg = document.getElementById("result-msg")
+
+    // decimal to octal
+
+    if (input.value.trim() === "") {
+        msg.innerHTML = "Input must not be empty!"
+    } else {
+        msg.innerHTML = ""
+        var decimalValue = parseInt(input.value)
+        let octalResult = ""
+
+        if (decimalValue < 0) {
+            msg.innerHTML = "Input must not be less than 0!"
+        } else {
+            if (decimalValue === 0) {
+                octalResult = "0"
+            }
+            while (decimalValue > 0) {
+                octalResult = (decimalValue % 8) + octalResult
+                decimalValue = Math.floor(decimalValue / 8)
+            }
+        }
+        result.value = octalResult
     }
 }
 
