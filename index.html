@@ -11,22 +11,22 @@
     <div class="conversion-box">
         <div class="select-box">
             <div class="select-box-1">
-                <p>From</p><select class="select" id="convert-select-1">
+                <p>From</p><select class="select input" id="convert-select-1">
                     <option value="decimal">Decimal</option>
                     <option value="binary">Binary</option>
                 </select>            
             </div>
             <div class="select-box-2">
-                <p>To</p><select class="select"  id="convert-select-2">
+                <p>To</p><select class="select input"  id="convert-select-2">
                     <option value="decimal">Decimal</option>
                     <option value="binary">Binary</option>
                 </select>            
             </div>
         </div>
         <form class="conversion-result">
-            <input type="text" id="input" placeholder="Input" required>
+            <input class="input" type="text" id="input" placeholder="Input" required autocomplete="off">
             <input type="button" id="convert-button" value="Convert" onclick="convert()">
-            <input type="text" id="result" readonly placeholder="Result">      
+            <input class="input" type="text" id="result" readonly placeholder="Result">      
             <p id="result-msg"></p>      
         </form>
     </div>
