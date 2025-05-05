@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Number Conversions</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <h1 class="text">Number Conversion: <span class="conversion-name-1">Decimal</span> to <span class="conversion-name-2">Decimal</span></h1>
+    <h1 class="text">Number Conversion: <span class="conversion-name-1">Decimal</span> to <span
+            class="conversion-name-2">Decimal</span></h1>
     <div class="conversion-box">
         <div class="select-box">
             <div class="select-box-1">
@@ -15,23 +18,26 @@
                     <option value="decimal">Decimal</option>
                     <option value="binary">Binary</option>
                     <option value="octal">Octal</option>
-                </select>            
+                    <option value="hex">Hex</option>
+                </select>
             </div>
             <div class="select-box-2">
-                <p>To</p><select class="select input"  id="convert-select-2">
+                <p>To</p><select class="select input" id="convert-select-2">
                     <option value="decimal">Decimal</option>
                     <option value="binary">Binary</option>
                     <option value="octal">Octal</option>
-                </select>            
+                    <option value="hex">Hex</option>
+                </select>
             </div>
         </div>
         <form class="conversion-result">
             <input class="input" type="text" id="input" placeholder="Input" required autocomplete="off">
             <input type="button" id="convert-button" value="Convert" onclick="convert()">
-            <input class="input" type="text" id="result" readonly placeholder="Result">      
-            <p id="result-msg"></p>      
+            <input class="input" type="text" id="result" readonly placeholder="Result">
+            <p id="result-msg"></p>
         </form>
     </div>
 </body>
 <script src="script.js"></script>
+
 </html>
